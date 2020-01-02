@@ -1,0 +1,28 @@
+@startuml
+
+class plot {
+	* id
+	--
+	* name
+	* summary
+	* purpose
+}
+
+class plot_outcome {
+	* id
+	* plot_id
+	--
+	* description
+}
+
+class prop {
+	* id
+	--
+	* name
+	* description
+}
+
+plot <- "1..*" plot_outcome
+plot -> "0..*" prop
+
+@enduml
